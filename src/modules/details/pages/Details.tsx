@@ -1,19 +1,17 @@
 import { useParams } from "react-router-dom";
-import { DataPageTemplate } from "../../../components";
-import { AppDetails } from "../api";
+import { AppId } from "../../../types";
 import { AppPreview } from "../components";
 import { useAppDetails } from "../hooks";
+import { AppDetailsData } from "../types";
 
 export const Details = () => {
-  const { appId } = useParams();
-  const { status, data, refetch } = useAppDetails(appId as string);
+  const params = useParams();
+  const { data: details, refetch } = useAppDetails(params.appId as AppId);
 
   return (
-    <DataPageTemplate
-      status={status}
-      renderSuccess={() => (
-        <AppPreview details={data as AppDetails} onRefresh={() => refetch()} />
-      )}
+    <AppPreview
+      details={details as AppDetailsData}
+      onRefresh={() => refetch()}
     />
   );
 };

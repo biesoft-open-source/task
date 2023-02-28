@@ -1,10 +1,9 @@
 import { Container } from "@chakra-ui/react";
-import { Outlet } from "react-router-dom";
 
-export const Page = () => {
-  return (
-    <Container py="6">
-      <Outlet />
-    </Container>
-  );
+interface Props {
+  children: React.ReactNode;
+}
+
+export const Page = ({ children }: Props) => {
+  return <Container py="6">{children}</Container>;
 };

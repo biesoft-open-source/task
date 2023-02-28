@@ -1,1 +1,1 @@
-export { useAppDetails } from "./useAppDetails";
+export * from "./useAppDetails";

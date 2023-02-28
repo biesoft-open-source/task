@@ -1,1 +1,0 @@
-export { DataPageTemplate } from "./DataPageTemplate";

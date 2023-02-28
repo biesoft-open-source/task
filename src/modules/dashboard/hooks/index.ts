@@ -1,1 +1,1 @@
-export { useListApi } from "./useListApi";
+export * from "./useAppsList";

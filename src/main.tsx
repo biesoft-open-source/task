@@ -1,12 +1,10 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
-import { App } from "./App";
-import { AppProvider } from "./components";
+import { RouterProvider } from "react-router-dom";
+import { AppProvider, RootLoader } from "./components";
+import { router } from "./config";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <AppProvider>
-      <App />
-    </AppProvider>
-  </React.StrictMode>
+  <AppProvider>
+    <RouterProvider router={router} fallbackElement={<RootLoader />} />
+  </AppProvider>
 );

@@ -1,13 +1,6 @@
 import { axios } from "../../../config";
 import { endpoints } from "../../../constants";
-
-interface AppData {
-  id: number;
-  name: string;
-  company: string;
-}
-
-export type AppListData = AppData[];
+import { AppListData } from "../types";
 
 export const getList = async () => {
   const { data } = await axios.get<AppListData>(endpoints.list);
