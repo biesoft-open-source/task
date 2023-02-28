@@ -1,0 +1,1 @@
+export { useAppDetails } from "./useAppDetails";
