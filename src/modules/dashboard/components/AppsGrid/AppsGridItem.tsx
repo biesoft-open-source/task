@@ -5,7 +5,7 @@ import { AppData } from "../../types";
 
 type Props = AppData;
 
-export const AppGridItem = ({ id, name, company }: Props) => {
+export const AppsGridItem = ({ id, name, company }: Props) => {
   return (
     <GridItem
       as={Link}

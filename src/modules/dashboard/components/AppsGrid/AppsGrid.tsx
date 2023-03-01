@@ -1,6 +1,6 @@
 import { Grid } from "@chakra-ui/react";
 import { AppListData } from "../../types";
-import { AppGridItem } from "./AppGridItem";
+import { AppsGridItem } from "./AppsGridItem";
 
 interface Props {
   apps: AppListData;
@@ -10,7 +10,7 @@ export const AppsGrid = ({ apps }: Props) => {
   return (
     <Grid templateColumns="repeat(4, 1fr)" gap={6}>
       {apps.map((app) => (
-        <AppGridItem key={app.id} {...app} />
+        <AppsGridItem key={app.id} {...app} />
       ))}
     </Grid>
   );
